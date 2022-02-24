@@ -1,0 +1,12 @@
+<mat-grid-list cols="14" rowHeight="140px" gutterSize="5px">
+    <mat-grid-tile *ngFor="let tile of tiles"
+    [colspan]="tile.cols"
+    [rowspan]="tile.rows"
+    [style.border]="tile.border">
+    <img class = "tile-image" [src]="tile.img" style="object-fit: cover; height: inherit; width: inherit;">
+    <mat-grid-tile-header>
+    <h3>{{tile.text}}</h3>
+    </mat-grid-tile-header>
+    </mat-grid-tile>
+    </mat-grid-list>
+    
